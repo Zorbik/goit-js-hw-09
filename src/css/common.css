@@ -16,3 +16,24 @@ img {
   display: block;
   max-width: 100%;
 }
+.button__start,
+.button__stop {
+  position: absolute;
+  width: 10%;
+  height: 10%;
+  font-size: 300%;
+  border: 1px double blue;
+  border-radius: 10%;
+}
+.button__stop {
+  top: 50%;
+  left: 50%;
+}
+.button__start {
+  top: 50%;
+  left: 37%;
+}
+.button__start:active,
+.button__stop:active {
+  transform: scale(0.9);
+}
