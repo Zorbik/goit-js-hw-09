@@ -37,3 +37,27 @@ img {
 .button__stop:active {
   transform: scale(0.9);
 }
+#datetime-picker {
+  width: 250px;
+  height: 30px;
+  font-size: inherit;
+}
+.button__time {
+  width: 70px;
+  height: 30px;
+}
+.timer {
+  display: flex;
+  gap: 30px;
+}
+.field {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.field .value {
+  font-size: 40px;
+}
+.field .label {
+  text-transform: uppercase;
+}
