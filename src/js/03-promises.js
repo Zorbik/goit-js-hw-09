@@ -9,9 +9,9 @@ refs.form.addEventListener('submit', handlerValue);
 
 function handlerValue(e) {
   e.preventDefault();
-  let delay = Number(document.querySelector('[name="delay"]').value);
-  const step = Number(document.querySelector('[name="step"]').value);
-  const amount = Number(document.querySelector('[name="amount"]').value);
+  let delay = Number(refs.form.elements.delay.value);
+  const step = Number(refs.form.elements.step.value);
+  const amount = Number(refs.form.elements.amount.value);
   for (let i = 1; i <= amount; i += 1) {
     createPromise(i, delay)
       .then(({ position, delay }) => {
