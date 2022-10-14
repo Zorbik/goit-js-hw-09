@@ -42,6 +42,7 @@ function setTimer() {
 }
 
 function startTimer() {
+  handlerValue();
   refs.intervalID = setInterval(handlerValue, 1000);
   refs.buttonStart.setAttribute('disabled', 'disabled');
   refs.inputDate.setAttribute('disabled', 'disabled');

@@ -14,6 +14,7 @@ function stopColorChange() {
 }
 
 function onColorHandler() {
+  handleColorOnBody();
   refs.intervalID = setInterval(handleColorOnBody, 1000);
   refs.buttonStart.setAttribute('disabled', 'disabled');
 
