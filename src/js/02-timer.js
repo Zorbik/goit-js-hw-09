@@ -26,7 +26,7 @@ const refs = {
 };
 refs.buttonStart.setAttribute('disabled', 'disabled');
 
-const flatpickr = flatpickr(refs.inputDate, refs.options);
+const fp = flatpickr(refs.inputDate, refs.options);
 
 refs.inputDate.addEventListener('input', setTimer);
 refs.buttonStart.addEventListener('click', startTimer);
