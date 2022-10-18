@@ -26,7 +26,7 @@ const refs = {
 };
 refs.buttonStart.setAttribute('disabled', 'disabled');
 
-const fp = flatpickr(refs.inputDate, refs.options);
+const flatpickr = flatpickr(refs.inputDate, refs.options);
 
 refs.inputDate.addEventListener('input', setTimer);
 refs.buttonStart.addEventListener('click', startTimer);
@@ -58,7 +58,7 @@ function handlerValue() {
   refs.minutes.textContent = timeObject.minutes;
   refs.seconds.textContent = timeObject.seconds;
 }
-function convertMs(ms) {
+function convertMs(ms = 0) {
   // Number of milliseconds per unit of time
   const second = 1000;
   const minute = second * 60;
@@ -79,6 +79,6 @@ function convertMs(ms) {
   return { days, hours, minutes, seconds };
 }
 
-function addLeadingZero(value) {
+function addLeadingZero(value = 0) {
   return String(value).padStart(2, 0);
 }

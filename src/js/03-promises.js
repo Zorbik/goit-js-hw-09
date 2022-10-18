@@ -1,7 +1,6 @@
 import { Notify } from 'notiflix/build/notiflix-notify-aio';
 
 const refs = {
-  button: document.querySelector('[type="submit"]'),
   form: document.querySelector('.form'),
 };
 
@@ -24,7 +23,7 @@ function handlerValue(e) {
   }
 }
 
-function createPromise(position, delay) {
+function createPromise(position = 0, delay = 0) {
   return new Promise((resolve, reject) => {
     const shouldResolve = Math.random() > 0.3;
     setTimeout(() => {
@@ -36,5 +35,3 @@ function createPromise(position, delay) {
     }, delay);
   });
 }
-
-// ✅ ❌
