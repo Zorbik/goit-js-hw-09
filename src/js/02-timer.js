@@ -42,6 +42,12 @@ function setTimer() {
 }
 
 function startTimer() {
+  if (refs.choosenDate < Date.now()) {
+    refs.buttonStart.setAttribute('disabled', 'disabled');
+    Notify.failure('Please choose a date in the future');
+
+    return;
+  }
   handlerValue();
   refs.intervalID = setInterval(handlerValue, 1000);
   refs.buttonStart.setAttribute('disabled', 'disabled');
